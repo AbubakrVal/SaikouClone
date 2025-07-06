@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SaikouClone")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+eb0841daa7a4a608ed7201f7a495a27ec23e20d4")]
 [assembly: System.Reflection.AssemblyProductAttribute("SaikouClone")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SaikouClone")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -30,11 +30,11 @@ build_metadata.AdditionalFiles.ManifestResourceName = SaikouClone.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/mobil/Desktop/Coding-Projects/SaikouClone/MainPage.xaml]
+[C:/Users/mobil/Desktop/Coding-Projects/SaikouClone/Homepage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = SaikouClone.MainPage.xaml
-build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
-build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SaikouClone.Homepage.xaml
+build_metadata.AdditionalFiles.TargetPath = Homepage.xaml
+build_metadata.AdditionalFiles.RelativePath = Homepage.xaml
 
 [C:/Users/mobil/Desktop/Coding-Projects/SaikouClone/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
