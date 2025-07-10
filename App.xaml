@@ -5,10 +5,13 @@
              x:Class="SaikouClone.App">
     <Application.Resources>
         <ResourceDictionary>
+            <!-- Temporarily comment out merged dictionaries for debugging startup crash -->
+            <!--
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+            -->
         </ResourceDictionary>
     </Application.Resources>
 </Application>

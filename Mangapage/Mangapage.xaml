@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SaikouClone.Mangapage"
+             Title="Manga"
+             BackgroundColor="#0F1115">
+    
+    <Grid RowDefinitions="Auto,*,Auto">
+        <!-- Header -->
+        <Grid Grid.Row="0" Padding="15,10" ColumnDefinitions="Auto,*,Auto">  
+            <SearchBar Grid.Column="1" 
+                      Placeholder="Search manga..."
+                      Margin="10,0"
+                      BackgroundColor="#1C1D26"
+                      TextColor="White"/>
+            
+            <ImageButton Grid.Column="2" 
+                        Source="user_icon.png"
+                        HeightRequest="30"
+                        WidthRequest="30"
+                        CornerRadius="15"/>
+        </Grid>
+
+        <!-- Main Content -->
+        <ScrollView Grid.Row="1">
+            <StackLayout Spacing="20">
+                <!-- Featured Manga -->
+                <Label Text="Featured Manga" 
+                      FontSize="Title"
+                      FontAttributes="Bold"
+                      TextColor="White"
+                      Margin="10,0,0,0"/>
+                
+                <CarouselView HeightRequest="220">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame CornerRadius="15" Padding="0" Margin="10" HasShadow="True">
+                                <Image Source="berserk_cover.jpg"
+                                      Aspect="AspectFill"/>
+                            </Frame>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+                
+                <!-- Popular Manga -->
+                <Label Text="Popular Manga" 
+                      FontSize="Title"
+                      FontAttributes="Bold"
+                      TextColor="White"
+                      Margin="10,0,0,0"/>
+                
+                <CollectionView ItemsSource="{Binding PopularManga}"
+                              HeightRequest="200"
+                              SelectionMode="None">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal" ItemSpacing="15"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame WidthRequest="150" 
+                                  HeightRequest="220" 
+                                  CornerRadius="15"
+                                  Padding="0"
+                                  BackgroundColor="#1C1D26">
+                                <Grid>
+                                    <Image Source="{Binding ImageUrl}" 
+                                           Aspect="AspectFill"/>
+                                    <BoxView Color="#80000000" 
+                                             VerticalOptions="End"/>
+                                    <Label Text="{Binding Title}" 
+                                           TextColor="White"
+                                           FontAttributes="Bold"
+                                           VerticalOptions="End"
+                                           Margin="10"/>
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Bottom Navigation -->
+        <Grid Grid.Row="2" 
+              BackgroundColor="#0F1115"
+              HeightRequest="60"
+              ColumnDefinitions="*,*,*">
+            <Button x:Name="AnimeButton"
+                   Text="Anime" 
+                   TextColor="#8A8A8F" 
+                   BackgroundColor="Transparent"
+                   Clicked="OnNavButtonClicked"/>
+            
+            <Button x:Name="HomeButton"
+                   Text="Home" 
+                   TextColor="#8A8A8F" 
+                   BackgroundColor="Transparent"
+                   Clicked="OnNavButtonClicked"/>
+            
+            <Button x:Name="MangaButton"
+                   Text="Manga" 
+                   TextColor="#FF5722" 
+                   BackgroundColor="Transparent"
+                   FontAttributes="Bold"
+                   Clicked="OnNavButtonClicked"/>
+        </Grid>
+    </Grid>
+</ContentPage>

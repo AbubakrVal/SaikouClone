@@ -18,6 +18,12 @@ build_property.EnableGeneratedComInterfaceComImportInterop =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
+[C:/Users/mobil/Desktop/Coding-Projects/SaikouClone/Animepage/Animepage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SaikouClone.Animepage.Animepage.xaml
+build_metadata.AdditionalFiles.TargetPath = Animepage\Animepage.xaml
+build_metadata.AdditionalFiles.RelativePath = Animepage\Animepage.xaml
+
 [C:/Users/mobil/Desktop/Coding-Projects/SaikouClone/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = SaikouClone.App.xaml
@@ -30,11 +36,17 @@ build_metadata.AdditionalFiles.ManifestResourceName = SaikouClone.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[C:/Users/mobil/Desktop/Coding-Projects/SaikouClone/Homepage.xaml]
+[C:/Users/mobil/Desktop/Coding-Projects/SaikouClone/Homepage/Homepage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = SaikouClone.Homepage.xaml
-build_metadata.AdditionalFiles.TargetPath = Homepage.xaml
-build_metadata.AdditionalFiles.RelativePath = Homepage.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SaikouClone.Homepage.Homepage.xaml
+build_metadata.AdditionalFiles.TargetPath = Homepage\Homepage.xaml
+build_metadata.AdditionalFiles.RelativePath = Homepage\Homepage.xaml
+
+[C:/Users/mobil/Desktop/Coding-Projects/SaikouClone/Mangapage/Mangapage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = SaikouClone.Mangapage.Mangapage.xaml
+build_metadata.AdditionalFiles.TargetPath = Mangapage\Mangapage.xaml
+build_metadata.AdditionalFiles.RelativePath = Mangapage\Mangapage.xaml
 
 [C:/Users/mobil/Desktop/Coding-Projects/SaikouClone/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

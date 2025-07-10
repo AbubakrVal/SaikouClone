@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SaikouClone.Homepage.Homepage"
+             Title="Saikou"
+             BackgroundColor="#0F1115">
+    
+    <Grid RowDefinitions="Auto,*,Auto">
+        <!-- Header -->
+        <Grid Grid.Row="0" Padding="15,10" ColumnDefinitions="Auto,*,Auto">  
+                <VerticalStackLayout Spacing="0" VerticalOptions="Start">
+                    <!-- User name -->
+                    <Label Text="Abubakr"
+                        FontSize="Medium"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        HorizontalOptions="Start"
+                        Margin="0"/> 
+                    
+                    <Label Text="Episodes Watched: "
+                        FontSize="Small"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        HorizontalOptions="Start"
+                        Margin="0"/>
+                        
+                    <Label Text="Chapters read: "
+                        FontSize="Small"
+                        FontAttributes="Bold"
+                        TextColor="White"
+                        HorizontalOptions="Start"
+                        Margin="0"/>
+                </VerticalStackLayout>
+            <!-- Profile button -->
+                <Frame Grid.Column="2" 
+                    Padding="0"
+                    BorderColor="#1d222a"  
+                    BackgroundColor="Transparent"
+                    HasShadow="False"
+                    CornerRadius="60">
+                    <ImageButton Source="dotnet_bot.png"
+                                HeightRequest="80"
+                                WidthRequest="80"
+                                CornerRadius="60"/>
+                </Frame>
+        </Grid>
+
+        <!-- Main Content -->
+        <ScrollView Grid.Row="1">
+            <StackLayout Spacing="20"> 
+                <!-- Quick Actions -->
+                <HorizontalStackLayout Spacing="15" HorizontalOptions="Center">
+                    <Button Text="Browse Anime"
+                            x:Name="BrowseAnimeButton"
+                            Clicked="BrowseAnimeClicked"
+                            BackgroundColor="#1C1D26"
+                            TextColor="White"
+                            WidthRequest="150"
+                            CornerRadius="20"/>
+                            
+                    <Button Text="Browse Manga"
+                            x:Name="BrowseMangaButton"
+                            Clicked="BrowseMangaClicked"
+                            BackgroundColor="#1C1D26"
+                            TextColor="White"
+                            WidthRequest="150"
+                            CornerRadius="20"/>
+                </HorizontalStackLayout>
+                
+                <!-- Anime Watched -->
+
+                <Label Text="Anime Watched" 
+                    FontSize="Title"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    Margin="10,20,0,10"/>
+
+                <CollectionView ItemsSource="{Binding RecentUpdates}"
+                            HeightRequest="220"
+                            SelectionMode="None"
+                            HorizontalOptions="Start">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal" ItemSpacing="15"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame WidthRequest="160" 
+                                HeightRequest="220" 
+                                CornerRadius="15"
+                                Padding="0"
+                                BackgroundColor="#1C1D26">
+                                <Grid>
+                                    <Image Source="{Binding ImageUrl}" 
+                                        Aspect="AspectFill"/>
+                                    <BoxView Color="#80000000" 
+                                            VerticalOptions="End"
+                                            HeightRequest="80"/>
+                                    <VerticalStackLayout VerticalOptions="End"
+                                                        Margin="10"
+                                                        Spacing="4">
+                                        <Label Text="{Binding Title}" 
+                                            TextColor="White"
+                                            FontAttributes="Bold"
+                                            FontSize="14"/>
+                                        <Label Text="{Binding EpisodeInfo}" 
+                                            TextColor="#AAAAAA"
+                                            FontSize="12"/>
+                                        <Label Text="{Binding TimeAgo}" 
+                                            TextColor="#FF5722"
+                                            FontSize="12"/>
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <!-- Manga read -->
+                <Label Text=" Manga Read " 
+                    FontSize="Title"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    Margin="10,20,0,10"/>
+
+                <CollectionView ItemsSource="{Binding RecentUpdates}"
+                            HeightRequest="220"
+                            SelectionMode="None"
+                            HorizontalOptions="Start">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal" ItemSpacing="15"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame WidthRequest="160" 
+                                HeightRequest="220" 
+                                CornerRadius="15"
+                                Padding="0"
+                                BackgroundColor="#1C1D26">
+                                <Grid>
+                                    <Image Source="{Binding ImageUrl}" 
+                                        Aspect="AspectFill"/>
+                                    <BoxView Color="#80000000" 
+                                            VerticalOptions="End"
+                                            HeightRequest="80"/>
+                                    <VerticalStackLayout VerticalOptions="End"
+                                                        Margin="10"
+                                                        Spacing="4">
+                                        <Label Text="{Binding Title}" 
+                                            TextColor="White"
+                                            FontAttributes="Bold"
+                                            FontSize="14"/>
+                                        <Label Text="{Binding EpisodeInfo}" 
+                                            TextColor="#AAAAAA"
+                                            FontSize="12"/>
+                                        <Label Text="{Binding TimeAgo}" 
+                                            TextColor="#FF5722"
+                                            FontSize="12"/>
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+                <!-- Recommendation -->
+                <Label Text=" Recommendation " 
+                    FontSize="Title"
+                    FontAttributes="Bold"
+                    TextColor="White"
+                    Margin="10,20,0,10"/>
+
+                <CollectionView ItemsSource="{Binding RecentUpdates}"
+                            HeightRequest="220"
+                            SelectionMode="None"
+                            HorizontalOptions="Start">
+                    <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal" ItemSpacing="15"/>
+                    </CollectionView.ItemsLayout>
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame WidthRequest="160" 
+                                HeightRequest="220" 
+                                CornerRadius="15"
+                                Padding="0"
+                                BackgroundColor="#1C1D26">
+                                <Grid>
+                                    <Image Source="{Binding ImageUrl}" 
+                                        Aspect="AspectFill"/>
+                                    <BoxView Color="#80000000" 
+                                            VerticalOptions="End"
+                                            HeightRequest="80"/>
+                                    <VerticalStackLayout VerticalOptions="End"
+                                                        Margin="10"
+                                                        Spacing="4">
+                                        <Label Text="{Binding Title}" 
+                                            TextColor="White"
+                                            FontAttributes="Bold"
+                                            FontSize="14"/>
+                                        <Label Text="{Binding EpisodeInfo}" 
+                                            TextColor="#AAAAAA"
+                                            FontSize="12"/>
+                                        <Label Text="{Binding TimeAgo}" 
+                                            TextColor="#FF5722"
+                                            FontSize="12"/>
+                                    </VerticalStackLayout>
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Bottom Navigation -->
+        <Grid Grid.Row="2" 
+              BackgroundColor="#0F1115"
+              HeightRequest="60">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            
+            <Button x:Name="AnimeButton"
+                   Grid.Column="0"
+                   Text="Anime" 
+                   TextColor="#8A8A8F" 
+                   BackgroundColor="Transparent"
+                   CornerRadius="0"
+                   Clicked="OnNavButtonClicked"/>
+            
+            <Button x:Name="HomeButton"
+                   Grid.Column="1"
+                   Text="Home" 
+                   TextColor="#FF5722" 
+                   BackgroundColor="Transparent"
+                   FontAttributes="Bold"
+                   CornerRadius="0"
+                   Clicked="OnNavButtonClicked"/>
+            
+            <Button x:Name="MangaButton"
+                   Grid.Column="2"
+                   Text="Manga" 
+                   TextColor="#8A8A8F" 
+                   BackgroundColor="Transparent"
+                   CornerRadius="0"
+                   Clicked="OnNavButtonClicked"/>
+        </Grid>
+    </Grid>
+</ContentPage>
